@@ -1,0 +1,373 @@
+.navbar {
+    width: 100%;
+    background-color: indigo;
+    /* overflow: auto; */
+    padding: 0;
+    box-shadow: 0px 4px 10px black;
+    position: fixed;
+}
+
+.icon {
+    float: left;
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+    background-color: black;
+    border: 1.5px white solid;
+    padding: 20px 30px;
+    border-radius: 30px;
+}
+
+.icon:hover {
+    color: black;
+    background-color: white;
+    border: 1.5px black solid;
+}
+
+.bar {
+    float: right;
+    color: white;
+}
+
+.navbar a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.active {
+    float: right;
+    background-color: rgb(212, 49, 49);
+    color: white;
+}
+
+.bar:hover, .active:hover {
+    border: 1px white solid;
+    border-radius: 25px;
+}
+
+.home {
+    width: 100%;
+    border: none;
+    display: flex;
+}
+
+.imgutama {
+    /* float: left; */
+    flex-basis: 1100px;
+    height: 500px;
+    width: 100%;
+}
+
+.ahli {
+    flex-basis: 200px;
+    background: rgb(185,129,227);
+    background: linear-gradient(0deg, rgba(185,129,227,1) 0%, rgba(75,0,130,1) 100%);
+    float: right;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.center-vertical {
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.text-center {
+    color: white;
+    font-size: 3rem;
+}
+
+.lengkap {
+    background-color: rgb(212, 49, 49);
+    color: white;
+    border: 1px white solid;
+    font-size: 1rem;
+    margin: 55px 100px;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.lengkap:hover {
+    background-color: transparent;
+}
+
+.Judul {
+    text-align: center;
+    background-color: #d43131;
+    color: white;
+    font-size: 30px;
+}
+
+.Judul:hover {
+    text-shadow: 0px 2px 1px black;
+}
+
+.imgtruk {
+    float: right;
+}
+
+.highlights {
+    text-align: center;
+}
+
+.choose {
+    width: 25%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.logoAbout {
+    background-color: indigo;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 7px black;
+}
+
+.VisidanMisi {
+    text-align: center;
+}
+
+#visimisi {
+    width: 100%;
+    font-size: 20px;
+    color: indigo;
+    background-color: #b981e3;
+    padding: 20px;
+    border: 2px indigo solid;
+    border-radius: 80px;
+}
+
+#visimisi:hover {
+    color: #b981e3;
+    background-color: indigo;
+    border: 2px #b981e3 solid;
+}
+
+.visiandmisi {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.visi {
+    margin-left: 180px;
+}
+.misi {
+    margin-left: 50px;
+}
+
+.visi, .misi {
+    flex-basis: 400px;
+    text-align: center;
+    border: 3px indigo solid;
+    padding: 30px;
+    display: inline-block;
+}
+
+.kota {
+    width: 100%;
+}
+
+.namaKota {
+    width: 35%;
+    height: auto;
+    text-align: center;
+    vertical-align: top;
+    margin: 10px 90px;
+    display: inline-block;
+    padding: 5px;
+    background-color: white;
+}
+
+.cars {
+    /* background: rgb(185,129,227);
+    background: linear-gradient(0deg, rgba(185,129,227,1) 0%, rgba(75,0,130,1) 100%); */
+    background-image: url("logoRoyalCars\ \(2\).png");
+    width: 100%;
+}
+
+.car {
+    width: 35%;
+    height: auto;
+    text-align: center;
+    vertical-align: top;
+    margin: 10px 90px;
+    display: inline-block;
+    border: 2px indigo solid;
+    padding: 5px;
+    background-color: white;
+}
+
+.contactUs {
+    background-image: url("contact-bg.jpg");
+}
+
+.request {
+    border: 1.5px white solid;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.callBack {
+    color: white;
+}
+
+.input {
+    font-size: 25px;
+    border: 1px black solid;
+    background-color: white;
+}
+
+.send {
+    font-size: 15px;
+    background-color: #d43131;
+    color: white;
+    border: 2px white solid;
+    padding: 10px 10px; 
+}
+
+.send:hover {
+    background-color: transparent;
+}
+
+.saran {
+    font-size: 25px;
+    padding: 40px 5px ;
+    background-color: white;
+    border: 1px black solid;
+}
+
+.list-contact {
+    text-align: center;
+    color: white;
+}
+
+.deskripsi {
+    width: 25%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.logoContact {
+    background-color: red;
+    border-radius: 50%;
+    margin-left: 40px;
+    vertical-align: middle;
+}
+
+.list-medsos {
+    text-align: center;
+}
+
+.medsos {
+    box-shadow: 0 5px 3px black;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: indigo;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    .icon, .bar, .active{
+        display: none;
+        position: relative;
+    }
+    .burger {
+        /* display: inline-block; */
+        cursor: pointer;
+        float: right;
+    }
+    .line1, .line2, .line3 {
+        width: 30px;
+        height: 5px;
+        background-color: black;
+        border: 1px white solid;
+        margin: 5px 20px;
+        transition: 0.8s;
+    }
+    .change .line1 {
+        transform: translate(0, 10px) rotate(-45deg);
+    }
+    .change .line2 {
+        opacity: 0;
+    }
+    .change .line3 {
+        transform: translate(0, -10px) rotate(45deg);
+    }
+    .navbar a:not(:first-child) {
+        display: none;
+    }
+    .navbar a.burger {
+        float: right;
+        display: block;
+    }
+    .navbar.responsive {
+        position: fixed;
+    }
+    .navbar.responsive .burger {
+        position: fixed;
+        display: inline;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .home {
+        display: block;
+    }
+    .imgutama, .ahli {
+        float: none;
+        width: 100%;
+        height: 360px;
+    }
+    .lengkap {
+        font-size: 20px;
+    }
+    .imgtruk {
+        display: none;
+    }
+    .choose {
+        width: 100%;
+    }
+    .visiandmisi{
+        display: block;
+        position: relative;
+    }
+    .visi, .misi {
+        margin: 8px;
+    }
+    .namaKota, .car {
+        width: 65%;
+        margin: 10px 70px;
+    }
+    .request {
+        margin-left: 50px;
+    }
+    .deskripsi {
+        width: 100%;
+        text-align: left;
+    }
+}
+

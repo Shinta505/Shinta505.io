@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalCars</title>
+    <meta name="author" content="Shinta Nursobah">
+    <link rel="icon" type="image/x-icon" href="./images/logoRC.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="navbar" id="myTopnav">
+        <a class="icon"><b> RoyalCars</b></a>
+        <a class="bar" href="#Location">Location</a>
+        <a class="bar" href="#cars"></i> Cars</a>
+        <a class="bar" href="#ContactUs">Contact Us</a>
+        <a class="bar" href="#about"></i> About</a>
+        <a class="bar" href="#home">Home</a>
+        <a class="active" onclick="document.getElementById('id01').style.display='block'" style="width: auto;">Booking</a>
+        <a class="burger" onclick="myFunction()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </a>
+    </div>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Booking</h1>
+                <p>Tolong Isi Data dengan Benar</p>
+                <hr>
+                <label for="nama"><b>Nama</b></label>
+                <input type="text" placeholder="Enter Nama" name="nama" required>
+
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required>
+
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+
+                <label for="lokasi"><b>Lokasi Pemakaian Mobil</b></label>
+                <input type="text" placeholder="Enter Lokasi" name="lokasi" required>
+
+                <label for="waktusewa"><b>Waktu Penyewaan</b></label>
+                <input type="date" name="waktusewa" required>
+
+                <label for="waktukembali"><b>Waktu Pengembalian</b></label>
+                <input type="date" name="waktukembali" required>
+
+                <label for="merkmobil"><b>Merk Mobil</b></label>
+                <select name="merkmobil">
+                    <option value="">Toyota Avanza</option>
+                    <option value="">Toyota Alphard Transformer</option>
+                    <option value="">Daihatsu Xenia</option>
+                    <option value="">Daihatsu Luxio</option>
+                    <option value="">Toyota Innova Reborn</option>
+                    <option value="">Toyota Fortuner VRZ</option>
+                    <option value="">Isuzu Elf Short</option>
+                    <option value="">Isuzu Elf NLR Long</option>
+                    <option value="">Toyota Hiace Commuter</option>
+                    <option value="">Totoya Hiace Premio</option>
+                </select>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px;"> Remember me
+                </label>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="bookingbtn">Booking</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <p id="home"></p>
+    <div class="home">
+        <img class="imgutama" src="./images/cars1.jpg" alt="gambar mobil" width="600px" height="500px">
+        <div class="ahli">
+            <div class="center-vertical"></div>
+            <div class="text-center">RENT CAR EXPERTS SERVICE</div>
+            <div class="center-vertical"></div>
+            <a class="lengkap" href="#staycation"><b>STAYCATION</b></a> 
+            <br> <br>
+            <img src="./images/book-car.png" alt="book-car" width="200px" height="80px">
+        </div>
+    </div>
+
+    <p id="about"></p> <br> <br>
+    <h2 class="Judul">ABOUT</h2>
+    <br>
+    <div class="about">
+        <ul class="lis-choose">
+            <img class="imgtruk" src="./images/r-1.png" alt="mobil" width="40%">
+            <li class="choose"><img class="logoAbout" src="./images/fast-car.png" alt="car" width="50px">
+                <h4 class="Sub-Choose">Mobil Terkini</h4>
+                <p class="keterangan">Kendaraan nyaman keluaran terbaru yang cukup memuaskan Anda.</p>
+            </li>
+
+            <li class="choose"><img class="logoAbout" src="./images/persen.png" alt="harga" width="50px">
+                <h4 class="Sub-Choose">Harga Kompetitif</h4>
+                <p class="keterangan">Kami memastikan Anda mendapatkan kualitas dan harga terbaik</p>
+            </li>
+
+            <li class="choose"><img class="logoAbout" src="./images/layanan.png" alt="pelayanan" width="50px">
+                <h4 class="Sub-Choose">Pelayanan Unggul</h4>
+                <p class="keterangan">Tim kami yang ramah dan profesional siap membantu Anda</p>
+            </li>
+
+            <li class="choose"><img class="logoAbout" src="./images/safe.png" alt="keamanan" width="50px">
+                <h4 class="Sub-Choose">Keamanan dan Reservasi</h4>
+                <p class="keterangan">Kami melakukan pemeriksaan berkala dan pemeliharaan yang ketat</p>
+            </li>
+        </ul>
+        <div class="VisidanMisi">
+            <span id="visimisi">VISI DAN MISI</span>
+        </div>
+        <br> <br>
+        <div class="visiandmisi">
+            <div class="visi">
+                Visi Kami adalah menjadi mitra perjalanan pilihan utama bagi para pelanggan dengan 
+                menyediakan layanan sewa mobil terbaik, terpercaya, dan inovatif di Yogyakarta. 
+                Kami berkomitmen untuk terus meningkatkan kualitas layanan kami dan memastikan kepuasan pelanggan 
+                adalah fokus utama dalam segala hal yang kami lakukan.
+            </div> <br>
+            <div class="misi">
+                Misi Kami adalah memberikan pengalaman sewa mobil yang lancar, aman, dan terpercaya kepada setiap pelanggan kami. 
+                Kami berusaha untuk menjadi penyedia rental mobil terdepan dengan menyediakan flotila kendaraan yang terkini, 
+                harga yang bersaing, dan layanan pelanggan yang luar biasa.
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <p id="staycation"></p> <br> <br> <br> <br>
+    <div class="staycation">
+        <h2 class="highlights">
+            <b>INGIN LIBURAN KELUAR KOTA BERSAMA KOLEGA ATAU KELUARGA YANG NYAMAN ?</b> <br>
+            <b>KAMI MENYEDIAKAN SEWA MOBIL KE TUJUAN BERIKUT</b>
+            </h2>
+        <div class="kota">
+            <div class="namaKota">
+                <img class="imgkota" src="./images/Malang.jpg" alt="Malang" height="200"> <br>
+                <b>Jogja ke Malang</b> <br>
+                <div class="deskliburan">
+                    <p>
+                    Apakah Anda hendak melancong ke Malang? 
+                    Anda yang memiliki rencana ke Malang untuk acara bisnis, 
+                    keluarga atau wisata tentu telah menyiapkan semua keperluan 
+                    dan akomodasinya. 
+                    Kota Malang memiliki tempat wisata yang menarik untuk dikunjungi 
+                    contohnya Jatim Park , Selecta dan masih banyak lagi. 
+                    Dengan layanan sewa mobil Jogja Malang dari RoyalCars, 
+                    perjalanan wisata Anda akan serasa menyenangkan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="namaKota">
+                <img class="imgkota" src="./images/Bali.webp" alt="Bali" height="200"> <br>
+                <b>Jogja ke Bali</b> <br>
+                <div class="deskliburan">
+                    <p>
+                    Sewa mobil Jogja ke Bali adalah pilihan yang tepat untuk perjalanan Anda. 
+                    Kami menyediakan berbagai paket sewa mobil yang lengkap untuk akses 
+                    perjalanan dari Jogja ke Bali. 
+                    Siapa sih yang gak kenal dengan desa Bali yang satu ini? 
+                    Desa Panglipuran merupakan salah satu desa paling populer di Bali. 
+                    Bahkan, desa ini sering digunakan untuk lokasi syuting FTV. 
+                    Desa ini memiliki luas sekitar 112 hektare, tapi tak lebih dari 9 hektare difungsikan sebagai rumah warga. 
+                    Jika anda tertarik berkunjung ke Bali, langsung saja hubungi paket perjalanan sewa mobil Jogja ke Bali.
+                    </p>
+                </div>
+            </div>
+
+            <div class="namaKota">
+                <img class="imgkota" src="./images/Dieng.webp" alt="Dieng" height="200"> <br>
+                <b>Jogja ke Dieng</b> <br>
+                <div class="deskliburan">
+                    <p>
+                    Sewa mobil jogja ke Dieng ,Wonosobo untuk Wisata,pribadi perseorangan atau rombongan.
+                    Tersedia berbagai macam jenis sewa mobil yang bisa disewa dari RoyalCars. 
+                    Dieng memiliki banyak tempat wisata, seperti dataran tinggi dieng yang setiap musim 
+                    kemarau kita bisa menyaksikan dan merasakan hawa dingin embun upas. 
+                    Kami siap mengantarkan Anda dengan paket perjalanan sewa mobil Jogja ke Dieng
+                    </p>
+                </div>
+            </div>
+
+            <div class="namaKota">
+                <img class="imgkota" src="./images/Pacitan.jpeg" alt="Pacitan" height="200"> <br>
+                <b>Jogja ke Pacitan</b> <br>
+                <div class="deskliburan">
+                    <p>
+                    Dengan sewa mobil Jogja ke Pacitan, kamu akan mendapat satu mobil beserta Sopir, Bbm. 
+                    Kenyamanan dan keamananmu pun terjamin karena tidak akan digabung dengan pemesan / 
+                    penumpang lain, hanya kamu dan orang-orang tersayang. 
+                    Pacitan merupakan salah satu kabupaten di Jawa Timur yang memiliki spot-spot pemandangan pantainya yang menarik. 
+                    Jika Anda penggemar obyek wisata bahari. 
+                    Tak ada salahnya mencoba berkunjung ke Pacitan ini. 
+                    RoyalCars siap membawa Anda bersama keluarga, rekan kantor atau sekolah untuk berwisata bahari di Pacitan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="namaKota">
+                <img class="imgkota" src="./images/Jakarta.jpg" alt="Jakarta" height="200"> <br>
+                <b>Jogja ke Jakarta</b> <br>
+                <div class="deskliburan">
+                    <p>
+                    Sewa mobil Jogja ke Jakarta paling aman dan nyaman dengan fasilitas baik, tarif sewa murah, plus driver berpengalaman. 
+                    Dengan kendaraan yang bersih, wangi, dan berperfoma prima, membuat seluruh penumpang kendaraan ini akan merasa sangat nyaman. 
+                    Siapa yang tidak mengenal Dufan atau Dunia Fantasi? 
+                    Obyek wisata memiliki banyak jenis wahana permainan seperti halilintar, bianglala, istana boneka, kora-kora, niagara-gara 
+                    dan masih banyak lagi. Anda yang belum pernah berkunjung ke Dufan? 
+                    Kami RoyalCars dengan layanan sewa Mobil Jogja Jakarta siap menemani perjalanan wisata Anda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p id="cars"></p> <br> <br>
+    <div class="cars">
+        <h2 class="Judul">CARS</h2>
+        <div class="car">
+            <img class="imgcar" src="./images/Toyota Avanza.png" alt="ToyotaAvanza" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Toyota Avanza</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 5-6 orang <br>
+                    Mobil+Supir Rp 500.000,-/12 jam <br>
+                    Mobil+Supir Rp 550.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 550.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 600.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 650.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 700.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Toyota Alphard Transformer.png" alt="ToyotaAlphard" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Toyota Alphard Transformer</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 4-5 orang <br>
+                    Mobil+Supir Rp 2.750.000,-/12 jam <br>
+                    Mobil+Supir Rp 2.850.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 2.900.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 3.000.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 3.100.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 3.150.000,-/Hari <br>
+                    Fasilitas : AC,FULL MUSIK, AIR MINERAL, DAN PARCEL BUAH <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Daihatsu Xenia.avif" alt="DaihatsuXenia" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Daihatsu Xenia</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 5-6 orang <br>
+                    Mobil+Supir Rp 500.000,-/12 jam <br>
+                    Mobil+Supir Rp 550.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 550.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 600.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 650.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 700.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Daihatsu Luxio.webp" alt="DaihatsuLuxio" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Daihatsu Luxio</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 5-6 orang <br>
+                    Mobil+Supir Rp 500.000,-/12 jam <br>
+                    Mobil+Supir Rp 550.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 550.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 600.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 650.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 700.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Toyota inova reborn.png" alt="ToyotaInova" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Toyota Innova Reborn</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 6-7 orang <br>
+                    Mobil+Supir Rp 700.000,-/12 jam <br>
+                    Mobil+Supir Rp 750.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 750.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 800.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 850.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 900.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Toyota Fortuner VRZ.webp" alt="ToyotaFortunerVRZ" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Toyota Fortuner VRZ</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 5-7 orang <br>
+                    Mobil+Supir Rp 1.300.000,-/12 jam <br>
+                    Mobil+Supir Rp 1.350.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 1.350.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 1.400.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.450.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.500.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Isuzu Elf Short.png" alt="IsuzuElfShort" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Isuzu Elf Short</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 10-12 orang <br>
+                    Mobil+Supir Rp 800.000,-/12 jam <br>
+                    Mobil+Supir Rp 850.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 850.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 900.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 950.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.000.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Isuzu Elf NLR Long.png" alt="IsuzuElfNLRLong" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Isuzu Elf NLR Long</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 17-19 orang <br>
+                    Mobil+Supir Rp 1.200.000,-/12 jam <br>
+                    Mobil+Supir Rp 1.250.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 1.250.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 1.300.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.350.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.400.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Toyota Hiace Commuter.png" alt="ToyotaHiaceCommuter" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Toyota Hiace Commuter</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 12-14 orang <br>
+                    Mobil+Supir Rp 1.000.000,-/12 jam <br>
+                    Mobil+Supir Rp 1.050.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 1.050.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 1.100.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.150.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.200.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL  <br>
+                </p>
+            </div>
+        </div>
+        <div class="car">
+            <img class="imgcar" src="./images/Toyota Hiace Premio.png" alt="ToyotaHiacePremio" width="300px" height="300px"> <br>
+            <h3 class="merkCar">Toyota Hiace Premio</h3>
+            <div class="panel">
+                <p>
+                    Kapasitas : 12-14 orang <br>
+                    Mobil+Supir Rp 1.150.000,-/12 jam <br>
+                    Mobil+Supir Rp 1.200.000,-/Hari <br>
+                    Mobil+Supir+BBM Rp 1.200.000,-/12 jam <br>
+                    Mobil+Supir+BBM Rp 1.250.000,-/Hari <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.300.000,-/12 jam <br>
+                    Mobil+Supir+BBM+Parkir Rp 1.350.000,-/Hari <br>
+                    Fasilitas : AC DAN FULL MUSIK <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p id="ContactUs"></p> <br> <br>
+    <div class="contactUs">
+        <h2 class="Judul">Contact Us</h2>
+        <div class="request">
+            <form action="">
+                <h1 class="callBack"><b>Request A Call Back</b></h1> <br>
+                <input class="input" type="text" placeholder="Name"> <br> <br>
+                <input class="input" type="tel" placeholder="Phone"> <br> <br>
+                <input class="input" type="email" placeholder="Email"> <br> <br>
+                <input class="saran" type="text" placeholder="Message"> <br> <br>
+                <button class="send"><a href="#ContactUs"></a>SEND</button>
+            </form>
+        </div>
+        <br> <br>
+        <ul class="list-contact">
+            <li class="deskripsi">
+                <a class="logoContact" href="https://goo.gl/maps/hFtiPWrxmkYft9Vt5" target="_blank"><img class="imgcontact" src="./images/location.png" alt="location" width="60px"></a>
+                Lorem ipsum dolor sit
+            </li>
+            <li class="deskripsi">
+                <a class="logoContact" href="https://wa.me/6285737574272?text=Halo%20Saya%20mau%20bertanya%20seputar%20rental%20mobil%20RoyalCars" target="_blank"><img class="imgcontact" src="./images/call.png" alt="telp" width="60px"></a>
+                +62 857-3757-4272
+            </li>
+            <li class="deskripsi">
+                <a class="logoContact" href="mailto:mai@domain.com"><img class="imgcontact" src="./images/mail.png" alt="email" width="60px"></a>
+                mail@domain.com
+            </li>
+        </ul>
+        <br>
+        <div class="list-medsos">
+            <a class="medsos" href="https://www.facebook.com/" target="_blank"><img src="./images/fb.png" alt="Facebook"></a>
+            <a class="medsos" href="https://www.instagram.com/shntaa_nc" target="_blank"><img src="./images/ig.png" alt="Instagram"></a>
+            <a class="medsos" href="https://twitter.com" target="_blank"><img src="./images/twitter.png" alt="Twitter"></a>
+        </div>
+        <br> <br>
+    </div>
+
+    <p id="Location"></p> <br> <br>
+    <div class="Location">
+        <hr>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.0707703407284!2d110.41346921108722!3d-7.782321392205029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59f06c72b2f5%3A0xd4a4e0d9963c5e9c!2sUpn%20Veteran%20Yogyakarta%20Kampus%2C%20Janti%2C%20Caturtunggal%2C%20Kec.%20Depok%2C%20Kabupaten%20Sleman%2C%20Daerah%20Istimewa%20Yogyakarta%2055281!5e0!3m2!1sid!2sid!4v1692245737339!5m2!1sid!2sid" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <br> <br> <br>
+    <hr>
+    <p class="copyright">
+        Copyright &copy; 2023 All Rights Reserved. By Shinta Nursobah
+    </p>
+</body>
+</html>
