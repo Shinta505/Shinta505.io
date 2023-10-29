@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./images/wallpaper.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: black;
+    /* opacity: 0.2; */
+    border-radius: 5px;
+    box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
+    padding: 45px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(0px);
+}
+
+form {
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: antiquewhite;
+}
+
+.sign {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: antiquewhite;
+    text-shadow: 0px 2px 2px rgb(167, 133, 62);
+    font-size: 14px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    background: transparent;
+    color: antiquewhite;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #a7853e;
+}
+
+::placeholder {
+    color: antiquewhite;
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: antiquewhite;
+  }
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.container p a {
+    color: rgba(250, 235, 215, 0.808);
+    text-shadow: none;
+    text-decoration: underline;
+}
+
+.container p a:hover {
+    text-decoration: none;
+}
+
+.fb-g {
+    color: rgba(250, 235, 215, 0.699);
+    font-size: smaller;
+}
+
+.btn-login {
+    background-color: rgb(25, 25, 37, 0.8);
+    color: antiquewhite;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-login:hover {
+    background-color: rgb(25, 25, 37, 1);
+}
+
+.facebook, .google{
+    background-color: antiquewhite;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-color: #a7853e;
+    border-radius: 7px;
+}
+
+.facebook a, .google a {
+    color: rgb(25, 25, 37);
+}
