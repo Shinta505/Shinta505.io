@@ -26,7 +26,7 @@ body{
 
 
 header{
-    padding:1rem;
+    padding:1rem 7%;
     display:flex;
     background-color: var(--secondary-color);
     top: 0;
@@ -44,9 +44,13 @@ header{
     cursor: default;
 }
 
+.logo span {
+    color: orange;
+}
+
 .search{
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    border: 2px solid rgb(233, 220, 220);
     padding:0.5rem 1rem;
     border-radius: 50px;
     font-size: 1rem;
@@ -59,7 +63,7 @@ header{
 
 .search:focus{
     outline:0;
-    background-color: var(--primary-color);
+    background-color: transparent;
 }
 
 .search::placeholder{
@@ -307,31 +311,30 @@ main{
     margin: 20px;
     padding: 20px;
     text-align: center;
+    width: 300px; /* Tambahkan ukuran lebar */
 }
 
-/* #main {
-    display: grid;
-    grid-template-columns: 50%;
-} */
-
-h1 {
-    padding: 10px;
-    border-radius: 16px;
+.card h1 {
+    font-size: 20px; /* Ukuran teks title */
 }
 
-#main-img {
-    margin-right: 10px;
+.card h2 {
+    font-size: 16px; /* Ukuran teks year */
 }
 
-img {
+.card p {
+    font-size: 16px; /* Ukuran teks type */
+}
+
+.card img {
+    width: 100%; /* Biarkan gambar mengisi lebar card */
+    height: 300px; /* Tambahkan tinggi */
     border-radius: 10px;
-    width: 200px;
-    height: 300px;
     transition: 0.4s;
 }
 
-img:hover{
+.card:hover img {
     cursor: pointer;
     opacity: 95%;
-    transform: scale(105%);
+    transform: scale(1.05);
 }
