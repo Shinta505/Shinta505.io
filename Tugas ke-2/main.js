@@ -54,10 +54,10 @@ function createMovieCard(movie) {
   const title = document.createElement('h1');
   title.innerText = movie.Title;
 
-  const year = document.createElement('h2'); // Ubah menjadi 'h2' untuk tampilan yang lebih kecil.
+  const year = document.createElement('h2');
   year.innerText = movie.Year;
 
-  const type = document.createElement('p'); // Tambahkan elemen 'p' untuk menampilkan jenis film.
+  const type = document.createElement('p');
   type.innerText = movie.Type;
 
   const img = document.createElement('img');
