@@ -5,7 +5,14 @@ function getMoviesByKeyword(keyword, page) {
   const apiKey = 'd684a20e';
   const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${keyword}&page=${page}`;
 
-  return axios.get(apiUrl);
+  return axios.get(apiUrl)
+    .then(function (response) {
+      console.log(response.data); // Tambahkan ini untuk melihat data respons dari API.
+      return response;
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 function OnChangeSearch(searchParam) {
@@ -47,15 +54,24 @@ function createMovieCard(movie) {
   const title = document.createElement('h1');
   title.innerText = movie.Title;
 
+  const year = document.createElement('h2'); // Ubah menjadi 'h2' untuk tampilan yang lebih kecil.
+  year.innerText = movie.Year;
+
+  const type = document.createElement('p'); // Tambahkan elemen 'p' untuk menampilkan jenis film.
+  type.innerText = movie.Type;
+
   const img = document.createElement('img');
   img.setAttribute('src', movie.Poster);
   img.setAttribute('title', movie.Title);
 
   card.appendChild(title);
   card.appendChild(img);
+  card.appendChild(year);
+  card.appendChild(type);
 
   return card;
 }
+
 
 function updateNavigationButtons(totalResults) {
   const prevButton = document.querySelector('#prev');
