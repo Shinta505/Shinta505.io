@@ -1,13 +1,13 @@
 let currentPage = 1;
 const moviesPerPage = 5;
 
-function getMoviesByKeyword(keyword, page) {
+function getMoviesByKeyword(keyword, page, dataType) {
   const apiKey = 'd684a20e';
-  const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${keyword}&page=${page}`;
+  const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&s=${keyword}&page=${page}&type=${dataType}`;
 
   return axios.get(apiUrl)
     .then(function (response) {
-      console.log(response.data); // Tambahkan ini untuk melihat data respons dari API.
+      console.log(response.data); // Add this to see the API response data.
       return response;
     })
     .catch(function (error) {
@@ -19,7 +19,10 @@ function OnChangeSearch(searchParam) {
   const main = document.querySelector('#main');
   main.innerHTML = '';
 
-  getMoviesByKeyword(searchParam, currentPage)
+  const dataTypeSelect = document.getElementById('dataType');
+  const dataType = dataTypeSelect.value; // Get the selected data type.
+
+  getMoviesByKeyword(searchParam, currentPage, dataType) // Pass the data type to the function.
     .then(function (response) {
       if (response.data.Search) {
         const movies = response.data.Search;
@@ -30,15 +33,15 @@ function OnChangeSearch(searchParam) {
         const totalResults = parseInt(response.data.totalResults);
         updateNavigationButtons(totalResults);
 
-        // Hapus class 'no-results' jika hasil ada.
+        // Remove the 'no-results' class if results are found.
         const noResultsElement = document.querySelector('.no-results');
         if (noResultsElement) {
           noResultsElement.classList.remove('no-results');
         }
       } else {
         const noResults = document.createElement('div');
-        noResults.innerText = 'Tidak ada hasil.';
-        noResults.classList.add('no-results'); // Tambahkan class 'no-results'.
+        noResults.innerText = 'No results found.';
+        noResults.classList.add('no-results'); // Add the 'no-results' class.
         main.appendChild(noResults);
       }
     })
@@ -57,7 +60,7 @@ function createMovieCard(movie) {
   const year = document.createElement('h2');
   year.innerText = movie.Year;
 
-  const type = document.createElement('p');
+  const type = document.createElement('p'); 
   type.innerText = movie.Type;
 
   const img = document.createElement('img');
